@@ -1,3 +1,28 @@
+# Server-side pre-rendering
+
+## 1. Static-site Generation(SSG)
+----
+
+`users`
+
+[id].js => /users/1, /users/2 ...
+
+index.js => /users
+
+All user list page and detail pages are pre-generated in advance during **build time**.
+
+keywords: `getStaticProps`, `getStaticPaths`
+
+
+## 2. Server-side Rendering(SSR)
+----
+
+Coming soon...
+
+----
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
