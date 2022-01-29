@@ -18,7 +18,7 @@ export async function getStaticProps(context) {
       `https://jsonplaceholder.typicode.com/users/${id}`
     );
 
-    if (!response.ok) throw Error("Something went wrong!");
+    if (!response.ok) throw new Error("Failed to fetch API");
 
     const user = await response.json();
 
@@ -28,6 +28,7 @@ export async function getStaticProps(context) {
       },
     };
   } catch (error) {
+    console.log(error);
     return { notFound: true };
   }
 }
@@ -36,7 +37,7 @@ export async function getStaticPaths() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    if (!response.ok) throw Error("Something went wrong!");
+    if (!response.ok) throw new Error("Failed to fetch API");
 
     const users = await response.json();
 
@@ -71,6 +72,7 @@ page until props is ready.
       ]
   }  */
   } catch (error) {
+    console.log(error);
     return { fallback: true };
   }
 }

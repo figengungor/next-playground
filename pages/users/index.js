@@ -23,7 +23,7 @@ export async function getStaticProps() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    if (!response.ok) throw Error("Something went wrong!");
+    if (!response.ok) throw new Error("Something went wrong!");
 
     const users = await response.json();
 
@@ -33,6 +33,7 @@ export async function getStaticProps() {
     };
   } catch (error) {
     //ERROR! RETURN 404.js PAGE(Next.js uses default if you don't provide your own 404.js under pages)
+    console.log(error);
     return {
       notFound: true,
     };
