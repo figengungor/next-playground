@@ -7,6 +7,7 @@ export default function HomePage() {
       <Head>
         <title>Next Playground</title>
         <meta name="description" content="Learn Next.js" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Next, Please!</h1>
       <nav>
