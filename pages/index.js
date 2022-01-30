@@ -17,6 +17,9 @@ export default function HomePage() {
         <ul>
           <Link href="/users">Users</Link>
         </ul>
+        <ul>
+          <Link href="/trending-movies">Trending Movies</Link>
+        </ul>
       </nav>
     </div>
   );

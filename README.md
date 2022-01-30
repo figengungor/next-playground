@@ -1,27 +1,48 @@
 # Server-side pre-rendering
 
 ## 1. Static-site Generation(SSG)
-----
 
 `users`
 
-[id].js => /users/1, /users/2 ...
+    [id].js => /users/1, /users/2 ...
 
-index.js => /users
+    index.js => /users
 
 All user list page and detail pages are pre-generated in advance during **build time**.
 
-keywords: `getStaticProps`, `getStaticPaths`
+    keywords: `getStaticProps`, `getStaticPaths`
 
+### Incremental Static Re-generation(ISR)
+
+`trending-movies`
+
+    index.js => /trending-movies
+
+**Helpful links:**
+
+Create `.env.local` file inside root directory.
+
+Add your credentials there. (e.g. TMDB_API_KEY=blabla)
+
+[`next.config.js` env variable conf](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
+
+[TMDB API KEY](https://www.themoviedb.org/settings/api)
+
+[TMDB API DOCS](https://developers.themoviedb.org/3/getting-started/introduction)
+
+[`next/image` unconfigured host](https://nextjs.org/docs/messages/next-image-unconfigured-host)
+
+[TMDB images](https://developers.themoviedb.org/3/getting-started/images)
+
+[TMDB API => trending](https://developers.themoviedb.org/3/trending/get-trending)
+
+`npm install axios` (use axios instead of fetch)
+
+    keywords: `revalidate`
 
 ## 2. Server-side Rendering(SSR)
-----
 
 Coming soon...
-
-----
-
-
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
